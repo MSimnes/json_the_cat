@@ -1,0 +1,22 @@
+{
+  "name": "json_the_cat",
+  "version": "1.0.0",
+  "description": "used to fetch breed info from cat api from the command line",
+  "main": "breedFetcher.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MSimnes/json_the_cat.git"
+  },
+  "author": "@MSimnes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MSimnes/json_the_cat/issues"
+  },
+  "homepage": "https://github.com/MSimnes/json_the_cat#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
