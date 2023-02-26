@@ -5,9 +5,14 @@ const breed = argv[0];
 const fetchBreed = function(breed) {
   request(`https://api.thecatapi.com/v1/breeds/search?q=${breed}`, (error, response, body) => {
     const parsedBody = JSON.parse(body);
-    console.log(parsedBody);
-    let description = parsedBody[0].description;
-    console.log(description);
+    if (error) {
+      console.log("Error Details: ", error);
+    } else if (parsedBody.length < 1) {
+      console.log("Breed not found");
+    } else {
+      let description = parsedBody[0].description;
+      console.log(description);
+    }
   });
 };
 fetchBreed(breed);
