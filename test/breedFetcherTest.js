@@ -17,4 +17,17 @@ describe('fetchBreedDescription', () => {
       done();
     });
   });
+  it('returns an error saying "breed not found" if search was unsuccessful, via callback', (done) => {
+    fetchBreedDescription('wrt', (err, desc) => {
+      const expectedError = "Breed not found";
+     
+      // we expect an error
+      assert.equal(err, expectedError);
+
+      // compare returned description
+      assert.equal(null, desc);
+
+      done();
+    });
+  });
 });
